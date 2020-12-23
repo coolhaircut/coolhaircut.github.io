@@ -1,3 +1,4 @@
 # Cool Guys With Cool Haircuts
-* [doc](doc)
+
+* [doc]/(doc)
   * [zfs](doc/zfs)
