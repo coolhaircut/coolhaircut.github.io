@@ -1,1 +1,1 @@
-[ZFS](docs/zfs_index.md)
+* [ZFS](doc/zfs/INDEX.md)
