@@ -31,8 +31,8 @@ The following properties can be set at creation time, import time, and later cha
 
 ### Zpool Create Code
 ```
-VDEVS=(/dev/sda1 /dev/sdb2) # 2 example disks
-ZPOOL="deadpool"            # whatever name you want
+VDEVS=(/dev/sda1 /dev/sdb2)             # 2 example disks
+ZPOOL="deadpool"                        # whatever name you want
 sudo zpool create $ZPOOL ${VDEVS[@]}    \
   -o feature@allocation_classes=enabled \
   -o feature@async_destroy=enabled      \
@@ -41,7 +41,7 @@ sudo zpool create $ZPOOL ${VDEVS[@]}    \
   -o feature@empty_bpobj=enabled        \
   -o feature@enabled_txg=enabled        \
   -o feature@extensible_dataset=enabled \
-  -o feature@filesystem_limits=enabled   \
+  -o feature@filesystem_limits=enabled  \
   -o feature@hole_birth=enabled         \
   -o feature@large_blocks=enabled       \
   -o feature@lz4_compress=enabled       \
@@ -60,13 +60,13 @@ sudo zpool create $ZPOOL ${VDEVS[@]}    \
 ### Zvol Create Command
 ```
 sudo zfs create $ZPOOL/$VOLUME_NAME     \
-  -o canmount=off                        \
+  -o canmount=off                       \
   -o compression=on                     \
-  -o atime=off                           \
+  -o atime=off                          \
   -o relatime=on                        \
-  -o checksum=fletcher4                  \
+  -o checksum=fletcher4                 \
   -o compression=lz4                    \
-  -o xattr=off                           \
+  -o xattr=off                          \
   -o utf8only=on                        \
 ```
 
@@ -91,5 +91,5 @@ Generate a random 32 byte key with `dd if=/dev/random of=/path/to/key bs=32 coun
 Some applications that write consistently sized blocks (e.g. databases, torrents) may see performance benefits from using a matching `recordsize`.
 
 ```
-  -o recordsize=16k                        \
+  -o recordsize=16k
 ``` 
