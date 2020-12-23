@@ -1,1 +1,3 @@
-* [ZFS](doc/zfs/INDEX.md)
+# Cool Guys With Cool Haircuts
+* [doc](doc)
+  * [zfs](doc/zfs)
